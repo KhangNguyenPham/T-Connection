@@ -10,7 +10,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Raleway" !important;
   color: #444444;
 }
 
@@ -49,7 +49,6 @@ h6 {
 --------------------------------------------------------------*/
 .banner-title{
   color: #6ed180 !important;
-  font-family: "Poppins", sans-serif !important;
 }
 
 .banner-sub-title{
