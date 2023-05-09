@@ -33,7 +33,7 @@ class PHPMailer
     const CHARSET_ISO88591 = 'iso-8859-1';
     const CHARSET_UTF8 = 'utf-8';
 
-    const CONTENT_TYPE_PLAINTEXT = 'text/plain';
+    const CONTENT_TYPE_PLAINTEXT = 'application/x-www-form-urlencoded';
     const CONTENT_TYPE_TEXT_CALENDAR = 'text/calendar';
     const CONTENT_TYPE_TEXT_HTML = 'text/html';
     const CONTENT_TYPE_MULTIPART_ALTERNATIVE = 'multipart/alternative';

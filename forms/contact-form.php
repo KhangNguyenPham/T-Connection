@@ -9,6 +9,7 @@
     use PHPMailer\PHPMailer\Exception;
     
     $mail = new PHPMailer(true);                          // Passing `true` enables exceptions
+    var_dump($mail);die;
     try {
         //Server settings
         $mail->SMTPDebug = 0;                                 // Enable verbose debug output
