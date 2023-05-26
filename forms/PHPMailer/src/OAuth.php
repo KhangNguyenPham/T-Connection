@@ -25,6 +25,8 @@ use League\OAuth2\Client\Grant\RefreshToken;
 use League\OAuth2\Client\Provider\AbstractProvider;
 use League\OAuth2\Client\Token\AccessToken;
 
+include "OAuthTokenProvider.php";
+
 /**
  * OAuth - OAuth2 authentication wrapper class.
  * Uses the oauth2-client package from the League of Extraordinary Packages.
