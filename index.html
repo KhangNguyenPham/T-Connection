@@ -43,14 +43,17 @@
       const phone = document.getElementById('phone').value;
       const email = document.getElementById('email').value;
       const message = document.getElementById('message').value;
-      const date = new Date( new Date().getTime() + offset * 3600 * 1000).toUTCString().replace( / GMT$/, "" );
+      const date = new Date().toDateString();
+      const today = new Date();
+      const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+      const dateTime = date+' '+time;
       $.post(sheet_url,
       {
         email: email,
         phone_number: phone,
         conversion_name: name,
         conversion_time: message,
-        google_click_id: date,
+        google_click_id: dateTime,
       });
       document.getElementById('name').value = '';
       document.getElementById('phone').value = '';
