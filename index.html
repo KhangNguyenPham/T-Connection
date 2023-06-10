@@ -35,6 +35,28 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>      
+    var sheet_url = 'https://script.google.com/macros/s/AKfycbxj88RK8a3nwb-oGee5_EUPeXIhbIqGGxnhM0xCaKEEbLmoV6-WL6VoaFMBr19N_QxD0w/exec';
+    function sendInforToSheet() {
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      $.post(sheet_url,
+      {
+        email: email,
+        phone_number: phone,
+        conversion_name: name,
+        conversion_time: message
+      });
+      document.getElementById('name').value = '';
+      document.getElementById('phone').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('message').value = '';
+    }
+    
+  </script>
 </head>
 
 <body>
@@ -405,7 +427,7 @@
           </p>
           <i>Thông tin của bạn sẽ được bảo mật. Phần đánh dấu * là bắt buộc</i>
         </div>
-        <form action="forms/contact-form.php" method="post" enctype="application/x-www-form-urlencoded" role="form" class="php-email-form mt-3">
+        <form action="#" method="get" enctype="application/x-www-form-urlencoded" role="form" class="php-email-form mt-3">
           <div class="row">
             <div class="col-md-6 form-group">
               <input type="text" name="name" class="form-control rounded input-field" id="name" placeholder="Tên" required>
@@ -418,23 +440,21 @@
             <input type="text" class="form-control rounded input-field" name="phone" id="phone" placeholder="Số điện thoại" required>
           </div>
           <div class="form-group mt-3">
-            <textarea class="form-control rounded input-field" name="message" rows="5" placeholder="Lời nhắn" required></textarea>
+            <textarea class="form-control rounded input-field" name="message" rows="5" placeholder="Lời nhắn" id="message" required></textarea>
           </div>
-          <div class="my-3">
+          <!-- <div class="my-3">
             <div class="loading">Loading</div>
             <div class="error-message"></div>
             <div class="sent-message">Your message has been sent. Thank you!</div>
-          </div>
-          <div class="text-center"><button type="submit">Gửi</button></div>
+          </div> -->
+          <div class="text-center"><button id="submit" type="submit" onclick="sendInforToSheet()">Gửi</button></div>
         </form>
       </div>
     </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
-
   <!-- ======= Footer ======= -->
   <footer id="footer">
-
     <div class="footer-top">
       <div class="container">
         <div class="row">
